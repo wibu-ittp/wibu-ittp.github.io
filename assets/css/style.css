@@ -1,0 +1,151 @@
+/* CSS By AhmadMCer & Renzien */
+/* Versi: 1.0 */
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
+
+
+/* Base Body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Home */
+.home-container {
+    height: 100vh;
+    /* width: 100vw; */
+    background-color: hsla(350, 85%, 50%, 0.9);
+}
+
+.home-logo {
+    width: 75vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.desktop {
+    display: none;
+}
+
+.scroll-container{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+/* About */
+.about-container {
+    padding: 40px;
+    padding-bottom: 70px;
+    background-color: white;
+}
+
+.about-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    text-align: justify;
+    font-size: 16px;
+    margin-bottom: 1em;
+}
+
+/* Join */
+.join-container {
+    background-color: hsla(350, 85%, 50%, 0.9);
+    padding: 40px;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+}
+
+.number-container {
+    text-align: center;
+    color: white;
+}
+
+.number {
+    font-family: 'Zen Dots', cursive;
+    font-size: 32px;
+}
+
+.join-button {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: hsla(350, 85%, 50%, 1);
+}
+
+/* Footer */
+.footer {
+    background-color: hsla(0, 0%, 20%, 1);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Breakpoints */
+@media screen and (min-width: 768px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .about-container {
+        padding: 80px 160px;
+        padding-bottom: 180px;
+    }
+
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-text {
+        font-size: 24px;
+    }
+
+    .join-container {
+        padding: 80px 160px;
+        grid-template-rows: auto;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .number-container {
+        text-align: left;
+    }
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 160px;
+    }
+}
