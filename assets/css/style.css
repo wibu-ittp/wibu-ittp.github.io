@@ -31,7 +31,7 @@ body {
 .home-logo {
     width: 75vw;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -48,6 +48,21 @@ body {
     width: 100%;
     text-align: center;
     color: white;
+    animation: scroll-animation 3s infinite;
+}
+
+@keyframes scroll-animation {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
 /* About */
@@ -73,14 +88,14 @@ body {
 .join-container {
     background-color: hsla(350, 85%, 50%, 0.9);
     padding: 40px;
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-gap: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .number-container {
     text-align: center;
     color: white;
+    margin-bottom: 20px;
 }
 
 .number {
@@ -91,10 +106,20 @@ body {
 .join-button {
     background-color: white;
     border-radius: 20px;
-    padding: 20px;
+    padding: 20px 40px;
     text-align: center;
     text-decoration: none;
     color: hsla(350, 85%, 50%, 1);
+}
+
+.join-button:hover {
+    background-color: hsla(350, 85%, 50%, 1);
+    color: white;
+}
+
+.join-button:active {
+    background-color: hsla(350, 85%, 40%, 1);
+    color: white;
 }
 
 /* Footer */
@@ -106,8 +131,14 @@ body {
     font-size: 12px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+
+.instagram {
+    margin-bottom: 20px;
+}
+
+.instagram-link {
+    color: inherit;
 }
 
 /* Breakpoints */
@@ -134,18 +165,24 @@ body {
     }
 
     .join-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         padding: 80px 160px;
-        grid-template-rows: auto;
-        grid-template-columns: 2fr 1fr;
     }
 
     .number-container {
         text-align: left;
+        margin-bottom: 0;
     }
 
     .footer {
         flex-direction: row;
         justify-content: space-between;
         padding: 20px 160px;
+    }
+
+    .instagram {
+        margin-bottom: 0;
     }
 }
