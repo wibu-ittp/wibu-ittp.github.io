@@ -16,15 +16,58 @@ body {
     font-family: 'Zen Maru Gothic', sans-serif;
     background-image: url("../img/background.jpg");
     background-size: cover;
-    background-position: right;
+    background-position: right top;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+/* Hidden except redirect */
+/* body > div:not(.redirect-container) {
+    display: none;
+} */
+
+/* Redirect */
+.redirect-container {
+    height: 100vh;
+    background-color: hsla(350, 85%, 50%, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redirect-link {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    animation: redirect-animation 3s infinite;
+}
+
+.redirect-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+@keyframes redirect-animation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* Home */
 .home-container {
     height: 100vh;
-    /* width: 100vw; */
+    position: relative;
     background-color: hsla(350, 85%, 50%, 0.9);
 }
 
@@ -141,6 +184,27 @@ body {
     color: inherit;
 }
 
+/* Loading */
+.loading-container {
+    background-color: hsla(350, 85%, 50%, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 100%;
+}
+
+.loading-text {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+}
+
 /* Breakpoints */
 @media screen and (min-width: 768px) {
     .mobile {
@@ -168,7 +232,7 @@ body {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 80px 160px;
+        padding: 40px 160px;
     }
 
     .number-container {

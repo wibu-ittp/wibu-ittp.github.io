@@ -24,24 +24,34 @@
     <meta property="twitter:description" content="オタクイテテペ KOMUNITAS WIBU ITTP adalah komunitas bagi pecinta budaya pop Jepang di Institut Teknologi Telkom Purwokerto (ITTP).">
     <meta property="twitter:image" content="https://wibu-ittp.github.io/assets/img/meta_banner.jpg">
 
+    <!-- Redirect New Site -->
+    <!-- <meta http-equiv="refresh" content="0; url=https://wibu-ittp.w3spaces.com/" /> -->
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- Remix Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/47b2470024.js" crossorigin="anonymous"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- Redirect Container -->
+    <!-- <div class="redirect-container">
+        <p class="redirect-link"><a href=""><i class="ri-external-link-line"></i><br>新しいサイトにリダイレクト<br>Redirect to new site</a></p>
+    </div> -->
+
+    <!-- Home Container -->
     <div class="home-container">
         <img src="assets/img/mobile_logo.png" alt="home logo" class="home-logo mobile">
         <img src="assets/img/desktop_logo.png" alt="home logo" class="home-logo desktop">
         <div class="scroll-container">
-            <p class="scroll-down">下へスクロール<br>gulir ke bawah</p>
-            <i class="ri-arrow-down-s-line"></i>
+            <p class="scroll-down">下へスクロール<br>gulir ke bawah<br><i class="fa-solid fa-chevron-down"></i></p>
         </div>
     </div>
+
+    <!-- About Containers -->
     <div class="about-container">
         <h1 class="about-title">私たちは誰ですか？<br>SIAPA KAMI?</h1>
         <p class="about-text">オタクイテテペ KOMUNITAS WIBU ITTP adalah komunitas 
@@ -51,6 +61,8 @@
         <p class="about-text">Bergabunglah dengan オタクイテテペ KOMUNITAS WIBU ITTP dan temukan teman 
             sejenis yang memiliki minat dan antusiasme yang sama terhadap budaya pop Jepang!</p>
     </div>
+
+    <!-- Join Container -->
     <div class="join-container">
         <div class="number-container">
             <p class="number" id="number"></p>
@@ -58,10 +70,19 @@
         </div>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScl48T9-37KfW0M9i9eoZ8-UuLumb-bdlZe9X-7Eg06WD3DQA/viewform?usp=sf_link" target="_blank" class="join-button">今すぐ参加<br>bergabung sekarang</a>
     </div>
+
+    <!-- Footer -->
     <footer class="footer">
         <p class="instagram">Akun Instagram Resmi: <a href="https://www.instagram.com/wibu.ittp/" target="_blank" class="instagram-link">@wibu.ittp</a></p>
         <p class="copyright">Foto Latar Belakang oleh David Edelstein di Unsplash. Hak cipta &copy; 2023 オタクイテテペ Komunitas Wibu ITTP.</p>
-    </footer>
+    </footer>    
+
+    <!-- Loading Container -->
+    <div class="loading-container" id="loading">
+        <p class="loading-text"><i class="fa-solid fa-circle-notch fa-spin"></i><br>読み込み中<br>Loading</p>
+    </div>
+
+    <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>
